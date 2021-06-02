@@ -3,6 +3,7 @@ from fastapi import (
   status
 )
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from db import (
   CLIENTS,
   USUARIOS,
@@ -12,6 +13,16 @@ from db import (
 )
 
 app = FastAPI()
+
+origins = ['*']
+
+app.add_middleware(
+  CORSMiddleware,
+  allow_origins=origins,
+  allow_credentials=True,
+  allow_methods=["*"],
+  allow_headers=["*"],
+)
 
 @app.get("/")
 def home():
