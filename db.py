@@ -23,6 +23,6 @@ CAT_EQUIPOS = [
 ]
 
 CAT_USUARIOS = [
-  {'id': 1, 'nombre': 'Usuario_1'},
-  {'id': 2, 'nombre': 'Usuario_3'}
+  {'id': 1, 'nombre': 'Usuario_1', 'equipo_id': '1'},
+  {'id': 2, 'nombre': 'Usuario_3', 'equipo_id': '2'}
 ]
